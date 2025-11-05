@@ -3,7 +3,7 @@
 describe('Funcionalidade: Produtos', () => {
     
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos')
     });
 
     it('Deve selecionar um produto da lista', () => {
@@ -11,7 +11,7 @@ describe('Funcionalidade: Produtos', () => {
        //.first()
        //.last()
        //.eq(2)
-       .contains('Atlas Fitness Tank')
+       .contains('Ajax Full-Zip Sweatshirt')
        .click()
        
        cy.get('#tab-title-description > a').should('contain', 'Descrição')
