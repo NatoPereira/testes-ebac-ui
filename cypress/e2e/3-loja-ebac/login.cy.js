@@ -41,12 +41,17 @@ describe('Funcionalidade: Login', () => {
         cy.get('.woocommerce-MyAccount-content').should('contain' , 'Olá, natocastro-8871 (não é natocastro-8871? Sair)')
     });
 
-    it.only('Deve fazer login com sucesso - Usando Fixture', () => {
+    it('Deve fazer login com sucesso - Usando Fixture', () => {
         cy.fixture('perfil').then( dados =>{
             cy.get('#username').type(dados.usuario , {log: false})
             cy.get('#password').type(dados.senha , {log: false})
             cy.get('.woocommerce-form > .button').click()
             cy.get('.woocommerce-MyAccount-content').should('contain' , 'Olá, natocastro-8871 (não é natocastro-8871? Sair)')
         })
+    });
+
+    it('Deve fazer login com sucesso - usando Comandos customizados', () => {
+        cy.login('natocastro@outlook.com.br' , 'Natocastro')
+        cy.get('.woocommerce-MyAccount-content').should('contain' , 'Olá, natocastro-8871 (não é natocastro-8871? Sair)')
     });
 })
