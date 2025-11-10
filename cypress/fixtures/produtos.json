@@ -1,0 +1,20 @@
+[
+    {
+        "nomeProduto": "Argus All-Weather Tank",
+        "tamanho": "S",
+        "cor": "Gray",
+        "quantidade": 3
+    },
+    {
+        "nomeProduto": "Ajax Full-Zip Sweatshirt",
+        "tamanho": "XS",
+        "cor": "Blue",
+        "quantidade": 12
+    },
+     {
+        "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "XS",
+        "cor": "Red",
+        "quantidade": 25
+    }
+]
